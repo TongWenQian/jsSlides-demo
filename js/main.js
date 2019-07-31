@@ -4,7 +4,6 @@ window.onload = function(){
   var buttonWrapper = document.getElementById("buttonWrapper");
   var container = document.getElementsByClassName("container");
   var allButtons = document.getElementsByClassName("buttonNumber");
-  var timer;
   var index = 0;
 
   //初始图片所在位置
@@ -28,20 +27,13 @@ window.onload = function(){
   //创建一个方法用来设置选中的button
   function setButton(){
     if(index >= imgArr.length-1){
-      console.log("哈哈哈哈5:"+index);
       imgList.style.left = -400*index+"px";
-      console.log(imgList.style.left);
       var width = -(imgArr.length-1)*400+"px";
-      if(imgList.style.left == width){
-        console.log("hahahahahahahahahahahaah")
-        //imgList.style.transition = "none"
-        index=0;
-        
-        imgList.style.left=0; 
-      }  
-      //imgList.style.left=0; 
-      //imgList.style.transition = "none"
-      //imgList.style.transition = "all 1s";      
+      index=0;
+      setTimeout(function(){   
+          imgList.style.transition = "none" 
+          imgList.style.left=0; 
+      },1000);      
     }
     for(var i=0;i<allButtons.length;i++){
        allButtons[i].style.backgroundColor = "";
@@ -59,7 +51,6 @@ window.onload = function(){
       imgList.style.transition = "all 1s"
       index++;
       index %= imgArr.length;
-      console.log("哈哈哈哈"+index);
       imgList.style.left = -400*index+"px";
       setButton();
     },2000);
