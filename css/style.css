@@ -1,17 +1,23 @@
 
 *{margin: 0;padding: 0;}
 *{box-sizing: border-box;outline: none;}
+
+.container{
+    width: 500px;
+    margin: 50px auto;
+    border:1px solid grey;
+}
+
 .wrapper{
     width: 400px;
     height: 300px;
-    margin: 20px auto;
+    margin: 50px auto;
     overflow: hidden;
     position: relative;
 }
 .images{
     display: flex;
     transition: all 1s;
-    left: 0;
     position: absolute;
 }
 
@@ -25,6 +31,10 @@
     margin: 10px 10px;
     border-radius: 1px;
     background: RGBA(244, 244, 244, 0.5);
+}
+
+.buttonWrapper{
+    margin-bottom: 20px;
 }
 
 .buttonWrapper>button{
