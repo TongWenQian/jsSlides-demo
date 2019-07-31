@@ -1,0 +1,30 @@
+
+*{margin: 0;padding: 0;}
+*{box-sizing: border-box;outline: none;}
+.wrapper{
+  border: 1px solid red;
+}
+.wrapper{
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.images{
+    display: flex;
+    transition: all 1s;
+    left: 0;
+    position: absolute;
+}
+
+.images>img{
+    width: 100%;
+}
+.buttonWrapper>button{
+    width: 30px;
+    height: 20px;
+    border-radius: 1px;
+    background: RGBA(244, 244, 244, 0.5);
+}
+
